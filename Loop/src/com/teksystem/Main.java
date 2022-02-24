@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        // =====Conditional Statements=====
+        /*
 	    int x;
         // 1
         x = 7;
@@ -70,6 +72,75 @@ public class Main {
             default:
                 System.out.println("Out of range");
         }
+*/
+        // =====Loops=====
+        // 1
+        for (int i = 0; i < 10; i++) {
+            System.out.println("i is at: " + i);
+        }
 
+        // 2
+        int a = 0;
+        while (a < 100) {
+            System.out.println("Currently a is " + a);
+            a += 10;
+        }
+
+        // 3
+        int b = 0;
+        do {
+            System.out.println("Current b is " + b);
+            b++;
+        }
+        while (b<10);
+
+        // 4
+        for (int i = 1; i < 100; i++) {
+            if (i % 5 == 0) {
+                if (i>=25 && i<=75) {
+                    continue;
+                }
+                System.out.println(i);
+            }
+        }
+
+        // 5
+        for (int i = 1; i < 100; i++) {
+            if (i % 5 == 0) {
+                if (i > 50) {
+                    break;
+                }
+                System.out.println(i);
+            }
+        }
+
+        // 6
+        for (int i = 1; i < 3; i++) {
+            for (int j = 1; j < 6; j++) {
+                System.out.printf("Week %d: Day %d\n",i, j);
+            }
+        }
+
+        // 7.Write a program that returns all the available palindromes within 10 and 200
+//        for (int i = 10; i <= 200; i++) {
+//
+//        }
+
+        // 8.Write a program that prints the Fibonacci Sequence from 0 to 50.
+        int sum = 0, num1 = 0, num2 = 1;
+        for (int i = 0; i <= 50; i++) {
+            System.out.println(num1);
+            sum = num1 + num2;
+            num1 = num2;
+            if (num1 > 50) break;
+            num2 = sum;
+        }
+
+        // 9
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.printf("Inner loop j-%d of outer i-%d\n",j, i);
+            }
+        }
     }
 }
